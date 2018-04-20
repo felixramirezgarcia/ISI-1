@@ -3,14 +3,31 @@ package guauguapp;
 import java.util.ArrayList;
 
 public class Mascoteros {
-	public static final String url = "https://www.mascoteros.com/%s/%s?page=%s";
+	public String url = "https://www.mascoteros.com/%s/%s?page=%s";
 	public ArrayList<String> animals = new ArrayList<String>();
 	public ArrayList<ArrayList<String>> categorias = new ArrayList<ArrayList<String>>();
+
+    public ArrayList<String> nombres = new ArrayList<String>();
+    public ArrayList<String> descripciones = new ArrayList<String>();
+    public ArrayList<String> precios = new ArrayList<String>();
+    public ArrayList<String> enlaces = new ArrayList<String>();
 	
 	public Mascoteros(){
 		animals = inicializarAnimales();
     	categorias = inicializarCategorias();
 		
+	}
+	
+	public void imprimirPorPantalla() {
+        for(int j = 0 ; j < nombres.size() ; j++) {
+        	System.out.println(enlaces.get(j));
+        	System.out.println(precios.get(j)+nombres.get(j)+"\n"+descripciones.get(j));          	              	
+        }
+	}
+	
+	public void comprobacionNumero() {
+		//comprobacion de numero de atributos esnifados en cada pagina
+        System.out.println("enlaces: "+ enlaces.size() + " nombres :" + nombres.size() + " descripcion :" + descripciones.size()+ " precios : "+ precios.size());	
 	}
 	
 	public ArrayList<String> inicializarAnimales() {
