@@ -10,10 +10,10 @@ import org.jsoup.select.Elements;
 //SCRAPER PARA LA PAGINA DE MASCOTEROS
 public class Scraper {
     
-    public static final int maxPages = 3;
+ 
 		
-    public static void main (String args[]) {
-    	
+   /* public static void main (String args[]) {
+      	int maxPages = 3;
     	//-------------------------------------------------------MASCOTEROS-----------------------------------------------------------------
     	Mascoteros ob = new Mascoteros();
         for (int k = 0 ; k < ob.animals.size() ; k++){  
@@ -97,7 +97,7 @@ public class Scraper {
       //----------------------------------------------------------------FIN TIENDANIMAL-----------------------------------------------------------------
       
     }
-	
+	*/
 	
     /**
      * Con esta método compruebo el Status code de la respuesta que recibo al hacer la petición

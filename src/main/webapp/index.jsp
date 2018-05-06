@@ -21,11 +21,11 @@
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" href="#">
-              <i class="fa d-inline fa-lg fa-envelope-o"></i> Contacts</a>
+              <i class="fa d-inline fa-lg fa-envelope-o"></i> Contacto</a>
           </li>
         </ul>
         <a class="btn navbar-btn ml-2 text-white btn-secondary">
-          <i class="fa d-inline fa-lg fa-user-circle-o"></i>Registrarse</a>
+          <i class="fa d-inline fa-lg fa-user-circle-o"></i>Registrate!</a>
       </div>
     </div>
   </nav>
@@ -34,7 +34,7 @@
       <div class="row">
         <div class="col-md-12">
           <h1>GuauGuapp</h1>
-          <p class="lead mb-4">Busque lo mejor para los que más nos quieren</p>
+          <p class="lead mb-4">Busque lo mejor para los que mas nos quieren</p>
         </div>
       </div>
     </div>
@@ -48,9 +48,9 @@
               <div class="btn-group" id="b_dog">
                 <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> Perros</button>
                 <div class="dropdown-menu">
-                  <a href=resultados.html" class="dropdown-item">Alimentación</a>
+                  <a href="/perrosAlimentacion" class="dropdown-item">Alimentacion</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Juguetes</a>
+                  <a class="dropdown-item" href="/lista">Juguetes</a>
                 </div>
               </div>
             </div>
@@ -58,9 +58,9 @@
               <div class="btn-group" id="b_cat">
                 <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> Gatos</button>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href=resultados.html">Alimentación</a>
+                  <a class="dropdown-item" href="/lista">Alimentación</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Juguetes
+                  <a class="dropdown-item" href="/lista">Juguetes
                     <br> </a>
                 </div>
               </div>
@@ -69,9 +69,9 @@
               <div class="btn-group" id="b_bird">
                 <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Aves</button>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href=resultados.html">Alimentación</a>
+                  <a class="dropdown-item" href="/lista">Alimentación</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Juguetes</a>
+                  <a class="dropdown-item" href="/lista">Juguetes</a>
                 </div>
               </div>
             </div>
