@@ -1,3 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<%@ page import="guauguapp.Producto" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page import="java.util.*" %>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -29,72 +36,62 @@
       </div>
     </div>
   </nav>
+  
   <div class="p-5 bg-secondary">
     <div class="container">
       <div class="row">
-        <div class="p-3 align-self-center col-md-4">
-          <div class="card">
-            <div class="card-block p-5">
-              <hr>
-              <p>Precio: 1$</p>
-              <a href="#" class="btn btn-dark">Comprar</a>
-            </div>
-          </div>
-        </div>
-        <div class="p-3 align-self-center col-md-4">
-          <div class="card" >
-            <div class="card-block p-5">
-              <hr>
-              <p>Precio: 1$</p>
-              <a href="#" class="btn btn-dark">Comprar</a>
-            </div>
-          </div>
-        </div>
-        <div class="p-3 align-self-center col-md-4">
-          <div class="card">
-            <div class="card-block p-5">
-              <hr>
-              <p>Precio: 1$</p>
-              <a href="#" class="btn btn-dark">Comprar</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="p-5 bg-secondary">
-    <div class="container">
-      <div class="row">
-        <div class="p-3 align-self-center col-md-4">
-          <div class="card">
-            <div class="card-block p-5">
-              <hr>
-              <p>Precio: 1$</p>
-              <a href="#" class="btn btn-dark">Comprar</a>
-            </div>
-          </div>
-        </div>
-        <div class="p-3 align-self-center col-md-4">
-          <div class="card">
-            <div class="card-block p-5">
-              <hr>
-              <p>Precio: 1$</p>
-              <a href="#" class="btn btn-dark">Comprar</a>
-            </div>
-          </div>
-        </div>
-        <div class="p-3 align-self-center col-md-4">
-          <div class="card">
-            <div class="card-block p-5">
-              <hr>
-              <p>Precio: 1$</p>
-              <a href="#" class="btn btn-dark">Comprar</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+      
+     	<%
+			if (request.getAttribute("txtresultado") != null) {
+			ArrayList<Producto> itemsArray = (ArrayList<Producto>) request.getAttribute("txtresultado");
+			
+			 	for (int i=0; i < itemsArray.size()-4; i = i+3) {
+			 		%>
+			 			<div class="p-3 align-self-center col-md-4">
+					          <div class="card">
+					            <div class="card-block p-5">
+					              <hr>
+					              <p>Nombre : <% out.println(itemsArray.get(i).nombre); %></p>
+					              <p>Descripcion : <% out.println(itemsArray.get(i).descripcion); %> </p>
+					              <p>Precio :  <% out.println(itemsArray.get(i).precio); %></p>
+					              <a href=" <% out.println(itemsArray.get(i).enlace); %>" class="btn btn-dark">Comprar</a>
+					            </div>
+					          </div>
+					    </div>
+					    <div class="p-3 align-self-center col-md-4">
+					          <div class="card" >
+					            <div class="card-block p-5">
+					              <hr>
+					              <p>Nombre : <% out.println(itemsArray.get(i+1).nombre); %></p>
+					              <p>Descripcion : <% out.println(itemsArray.get(i+1).descripcion); %> </p>
+					              <p>Precio :  <% out.println(itemsArray.get(i+1).precio); %></p>
+					              <a href=" <% out.println(itemsArray.get(i+1).enlace); %>" class="btn btn-dark">Comprar</a>
+					            </div>
+					          </div>
+					    </div>
+					    <div class="p-3 align-self-center col-md-4">
+					          <div class="card">
+					            <div class="card-block p-5">
+					              <hr>
+					              <p>Nombre : <% out.println(itemsArray.get(i+2).nombre); %></p>
+					              <p>Descripcion : <% out.println(itemsArray.get(i+2).descripcion); %> </p>
+					              <p>Precio :  <% out.println(itemsArray.get(i+2).precio); %></p>
+					              <a href=" <% out.println(itemsArray.get(i+2).enlace); %>" class="btn btn-dark">Comprar</a>
+					            </div>
+					          </div>
+					    </div>
+					<%
+					 		}
+						}
+						else {
+							out.println("no me han llegado datos de productos");
+						}	
+			  		%>
+		</div>
+	</div>
+</div>
+		
+  		
   <div class="py-5 bg-dark text-white">
     <div class="container">
       <div class="row">

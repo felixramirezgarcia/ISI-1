@@ -40,45 +40,48 @@
     </div>
   </div>
   <div class="text-center bg-primary text-white py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="btn-group" id="b_dog">
-                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> Perros</button>
-                <div class="dropdown-menu">
-                  <a href="/perrosAlimentacion" class="dropdown-item">Alimentacion</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="/lista">Juguetes</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="btn-group" id="b_cat">
-                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> Gatos</button>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="/lista">Alimentación</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="/lista">Juguetes
-                    <br> </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="btn-group" id="b_bird">
-                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Aves</button>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="/lista">Alimentación</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="/lista">Juguetes</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  	<form action="perrosAlimentacion" method="get">
+	    <div class="container">
+	      <div class="row">
+	        <div class="col-md-12">
+	          <div class="row">
+	            <div class="col-md-4">
+	              <div class="btn-group" id="b_dog">
+	                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Perros</button>
+	                <div class="dropdown-menu">
+	                  <input name="pe_al" type="submit" value="Alimentacion">
+	                  <input value="perros_al" name="accion" type="hidden"> 
+	                  <div class="dropdown-divider"></div>
+	                  <a class="dropdown-item" href="/lista">Juguetes</a>
+	                </div>
+	              </div>
+	            </div>
+	            <div class="col-md-4">
+	              <div class="btn-group" id="b_cat">
+	                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> Gatos</button>
+	                <div class="dropdown-menu">
+	                  <a class="dropdown-item" href="/lista">Alimentacion</a>
+	                  <div class="dropdown-divider"></div>
+	                  <a class="dropdown-item" href="/lista">Juguetes
+	                    <br> </a>
+	                </div>
+	              </div>
+	            </div>
+	            <div class="col-md-4">
+	              <div class="btn-group" id="b_bird">
+	                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Aves</button>
+	                <div class="dropdown-menu">
+	                  <a class="dropdown-item" href="/lista">Alimentación</a>
+	                  <div class="dropdown-divider"></div>
+	                  <a class="dropdown-item" href="/lista">Juguetes</a>
+	                </div>
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+    	</div>
+    </form>
   </div>
   <div class="py-5 bg-dark text-white">
     <div class="container">
