@@ -45,11 +45,12 @@
 			if (request.getAttribute("txtresultado") != null) {
 			ArrayList<Producto> itemsArray = (ArrayList<Producto>) request.getAttribute("txtresultado");
 			
-			 	for (int i=0; i < itemsArray.size()-4; i = i+3) {
+			 	for (int i=0; i < itemsArray.size()-2; i = i+3) {
 			 		%>
 			 			<div class="p-3 align-self-center col-md-4">
 					          <div class="card">
 					            <div class="card-block p-5">
+					              <img src="<% out.println(itemsArray.get(i).imagen); %>"  alt="Imagen" width="180" height="180">
 					              <hr>
 					              <p>Nombre : <% out.println(itemsArray.get(i).nombre); %></p>
 					              <p>Descripcion : <% out.println(itemsArray.get(i).descripcion); %> </p>
@@ -61,6 +62,7 @@
 					    <div class="p-3 align-self-center col-md-4">
 					          <div class="card" >
 					            <div class="card-block p-5">
+					              <img src="<% out.println(itemsArray.get(i+1).imagen); %>"  alt="Imagen" width="180" height="180">
 					              <hr>
 					              <p>Nombre : <% out.println(itemsArray.get(i+1).nombre); %></p>
 					              <p>Descripcion : <% out.println(itemsArray.get(i+1).descripcion); %> </p>
@@ -72,6 +74,7 @@
 					    <div class="p-3 align-self-center col-md-4">
 					          <div class="card">
 					            <div class="card-block p-5">
+					           	  <img src="<% out.println(itemsArray.get(i+2).imagen); %>"  alt="Imagen" width="180" height="180">
 					              <hr>
 					              <p>Nombre : <% out.println(itemsArray.get(i+2).nombre); %></p>
 					              <p>Descripcion : <% out.println(itemsArray.get(i+2).descripcion); %> </p>

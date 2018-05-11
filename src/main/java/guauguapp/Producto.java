@@ -8,6 +8,7 @@ public class Producto {
     public String descripcion = new String();
     public String precio = new String();
     public String enlace = new String();
+    public String imagen = new String();
 	
 	public Producto(String nombre, String descripcion, String precio , String enlace){
 		this.nombre= nombre;
@@ -26,6 +27,10 @@ public class Producto {
 	
 	public void setEnlace(String enlace) {
 		this.enlace = enlace ;
+	}
+	
+	public void setImagen(String imag) {
+		this.imagen = imag ;
 	}
 	
 	public String imprimirPorPantalla() {

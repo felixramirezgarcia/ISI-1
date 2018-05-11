@@ -40,7 +40,7 @@
     </div>
   </div>
   <div class="text-center bg-primary text-white py-5">
-  	<form action="perrosAlimentacion" method="get">
+  	<form action="perrosAlimentacion" method="post">
 	    <div class="container">
 	      <div class="row">
 	        <div class="col-md-12">
