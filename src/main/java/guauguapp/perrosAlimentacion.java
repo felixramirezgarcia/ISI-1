@@ -51,6 +51,7 @@ public class perrosAlimentacion extends HttpServlet {
     			                		                 
     			                Elements entradas = document.select("div.product-card-content");		// Busco todos los productos de esa pagina que estan dentro del div con esa clase
     			                Elements links = document.select("a.add_click");		//.not("div.col-md-offset-2.col-md-4.col-xs-12");
+    			                Elements imagenes = document.getElementsByTag("img");
     			                		                		                
     			                for (Element elem : entradas) {		// Parseo cada uno de los productos y relleno los vectores
     			                	String nombre = elem.getElementsByClass("list_name_prod_box").text();
@@ -70,11 +71,20 @@ public class perrosAlimentacion extends HttpServlet {
     								aux.get(j).setEnlace(rem);
     							}
     			                
+    			                ArrayList<String> auxiliar = new ArrayList<String>();
+    			                for (Element ima : imagenes) {	
+    		    					String imagen = ima.getElementsByTag("img").attr("abs:data-src");
+    		    					if(imagen.indexOf(".jpg")!=-1) {
+    		    						auxiliar.add(imagen);
+    		    						System.out.println("La url de la imagen es : " + imagen);
+    		    					}		  		    					
+    		    				}
     			                
-
+    			                int g = 0;
     			                for (int j = 0; j < aux.size()-2; j=j+2) {
-    				                Producto p = new Producto(aux.get(j).nombre,aux.get(j).descripcion,aux.get(j+1).precio,aux.get(j+1).enlace);
+    				                Producto p = new Producto(aux.get(j).nombre,aux.get(j).descripcion,aux.get(j+1).precio,aux.get(j+1).enlace,auxiliar.get(g));
     				                resultado.add(p);
+    				                g++;
 								}
  		                	            
     			            }else{

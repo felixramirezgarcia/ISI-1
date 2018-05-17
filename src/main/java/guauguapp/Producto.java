@@ -17,6 +17,14 @@ public class Producto {
 		this.enlace = enlace;
 	}
 	
+	public Producto(String nombre, String descripcion, String precio , String enlace,String imagen){
+		this.nombre= nombre;
+		this.descripcion = descripcion;	    
+		this.precio = precio;
+		this.enlace = enlace;
+		this.imagen = imagen;
+	}
+	
 	public Producto(String nombre, String descripcion, String precio){
 		this.nombre= nombre;
 		this.descripcion = descripcion;
