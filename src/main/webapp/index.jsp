@@ -40,7 +40,7 @@
     </div>
   </div>
   <div class="text-center bg-primary text-white py-5">
-  	<form action="perrosAlimentacion" method="post">
+  	<form action="busqueda" method="post">
 	    <div class="container">
 	      <div class="row">
 	        <div class="col-md-12">
@@ -50,9 +50,10 @@
 	                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Perros</button>
 	                <div class="dropdown-menu">
 	                  <input name="pe_al" type="submit" value="Alimentacion">
-	                  <input value="perros_al" name="accion" type="hidden"> 
+	                  <input value="perros_al" name="perros_alimentacion" type="hidden"> 
 	                  <div class="dropdown-divider"></div>
-	                  <a class="dropdown-item" href="/lista">Juguetes</a>
+	                  <input name="pe_ju" type="submit" value="Juguetes">
+	                  <input value="perros_ju" name="perros_juguetes" type="hidden">
 	                </div>
 	              </div>
 	            </div>

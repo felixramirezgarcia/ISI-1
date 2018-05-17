@@ -17,17 +17,15 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-/**
- * Servlet implementation class lista
- */
-@WebServlet("/perrosAlimentacion")
-public class perrosAlimentacion extends HttpServlet {
+
+@WebServlet("/busqueda")
+public class Servlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public perrosAlimentacion() {
+    public Servlet() {
         super();
         
     }
@@ -155,9 +153,14 @@ public class perrosAlimentacion extends HttpServlet {
 		
 		PrintWriter out = response.getWriter();
 		
-		String accion = request.getParameter("accion");
-		if(accion.equals("perros_al")) {
+		String accion = request.getParameter("perros_alimentacion");
+		String accion1 = request.getParameter("perros_juguetes");
+		
+		/*if(accion.equals("perros_al")) {
 			this.escrapear(request,response,accion);			
+		}*/
+		if(accion1.equals("perros_ju")) {
+			this.escrapear(request,response,accion1);			
 		}
 	}
 
