@@ -43,7 +43,7 @@ public class Producto {
 	
 	public String imprimirPorPantalla() {
         	String g = new String();
-        	g = nombre + descripcion +  enlace + precio ;
+        	g = nombre + descripcion +  enlace + precio + imagen;
         	return g;       
 	}
 	
