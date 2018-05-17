@@ -49,11 +49,9 @@
 	              <div class="btn-group" id="b_dog">
 	                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Perros</button>
 	                <div class="dropdown-menu">
-	                  <input name="pe_al" type="submit" value="Alimentacion">
-	                  <input value="perros_al" name="perros_alimentacion" type="hidden"> 
+	                  <input  type="submit" value="Alimentacion_Canina" name="accion" > 
 	                  <div class="dropdown-divider"></div>
-	                  <input name="pe_ju" type="submit" value="Juguetes">
-	                  <input value="perros_ju" name="perros_juguetes" type="hidden">
+	                  <input  type="submit" value="Juguetes_Perros" name="accion" >
 	                </div>
 	              </div>
 	            </div>
@@ -61,10 +59,9 @@
 	              <div class="btn-group" id="b_cat">
 	                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> Gatos</button>
 	                <div class="dropdown-menu">
-	                  <a class="dropdown-item" href="/lista">Alimentacion</a>
+	                  <input  type="submit" value="Alimentacion_Felina" name="accion" > 
 	                  <div class="dropdown-divider"></div>
-	                  <a class="dropdown-item" href="/lista">Juguetes
-	                    <br> </a>
+	                  <input  type="submit" value="Arenas_Higiernicas" name="accion" >
 	                </div>
 	              </div>
 	            </div>
@@ -72,9 +69,9 @@
 	              <div class="btn-group" id="b_bird">
 	                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Aves</button>
 	                <div class="dropdown-menu">
-	                  <a class="dropdown-item" href="/lista">Alimentaci√≥n</a>
+	                  <input  type="submit" value="Alimentacion_Avicola" name="accion" > 
 	                  <div class="dropdown-divider"></div>
-	                  <a class="dropdown-item" href="/lista">Juguetes</a>
+	                  <input  type="submit" value="Snacks_avicola" name="accion" >
 	                </div>
 	              </div>
 	            </div>
@@ -88,7 +85,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-9">
-          <p class="lead">Reg√≠strese para ver los mejores productos a mejor precio</p>
+          <p class="lead">RegÌstrate para ver los mejores productos a mejor precio</p>
           <form class="form-inline">
             <div class="form-group">
               <input type="email" class="form-control" placeholder="Your e-mail here"> </div>
@@ -113,7 +110,7 @@
       </div>
       <div class="row">
         <div class="col-md-12 mt-3 text-center">
-          <p>Ingenier√≠a Sistemas de Informaci√≥n - Pr√°ctica&nbsp;</p>
+          <p>IngenierÌa Sistemas de InformaciÛn - Pr·ctica&nbsp;</p>
         </div>
       </div>
     </div>

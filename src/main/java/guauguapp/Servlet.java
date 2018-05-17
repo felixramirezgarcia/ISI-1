@@ -36,13 +36,10 @@ public class Servlet extends HttpServlet {
     	ArrayList<Producto> aux = new ArrayList<Producto>();
     	ArrayList<Producto> aux1 = new ArrayList<Producto>();
     	
-    	System.out.println(accion);
-    	
-    	
     	//-----------------------------------------------------------------SCRAPING A MASCOTEROS--------------------------------------------------------------------
     	Mascoteros ob = new Mascoteros();			   		        		
     	String urlMasco = String.format(ob.mapa.get(accion));	
-    	System.out.println("Comprobando entradas de: "+urlMasco);
+    	//System.out.println("Comprobando entradas de: "+urlMasco);
     						
     	if (Scraper.getStatusConnectionCode(urlMasco) == 200) {		// Compruebo si me da un 200 al hacer la petición
     									                
@@ -90,7 +87,7 @@ public class Servlet extends HttpServlet {
     	//-----------------------------------------------------------------SCRAPING A TIENDANIMAL--------------------------------------------------------------------
     	TiendAnimal ti = new TiendAnimal();  			
     	String urlTienda = String.format(ti.mapa.get(accion));		
-    	System.out.println("Comprobando entradas de: "+urlTienda);
+    	//System.out.println("Comprobando entradas de: "+urlTienda);
     						
     	if (Scraper.getStatusConnectionCode(urlTienda) == 200) {		// Compruebo si me da un 200 al hacer la petición
     							
@@ -152,16 +149,9 @@ public class Servlet extends HttpServlet {
 		//doGet(request, response);
 		
 		PrintWriter out = response.getWriter();
+		String accion = request.getParameter("accion");				
+		this.escrapear(request,response,accion);			
 		
-		String accion = request.getParameter("perros_alimentacion");
-		String accion1 = request.getParameter("perros_juguetes");
-		
-		/*if(accion.equals("perros_al")) {
-			this.escrapear(request,response,accion);			
-		}*/
-		if(accion1.equals("perros_ju")) {
-			this.escrapear(request,response,accion1);			
-		}
 	}
 
 }
