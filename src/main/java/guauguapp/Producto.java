@@ -1,5 +1,6 @@
 package guauguapp;
 
+import java.text.Normalizer;
 import java.util.Objects;
 
 public class Producto {
@@ -9,6 +10,7 @@ public class Producto {
     public String precio = new String();
     public String enlace = new String();
     public String imagen = new String();
+    public int tienda;
 	
 	public Producto(String nombre, String descripcion, String precio , String enlace){
 		this.nombre= nombre;
@@ -47,11 +49,27 @@ public class Producto {
         	return g;       
 	}
 	
+	public void setTienda(int numtiemda) {
+		this.tienda = numtiemda;
+	}
+	
 	 public static String acortar(String cadena, int n) {
 	        Objects.requireNonNull(cadena, "La cadena no puede ser nula.");
 	        int indice = n > cadena.length() ? 0 : cadena.length() - n;
 	        return cadena.substring(0, indice);
-	    }
+	 }
+	 
+	 public static String limpiarAcentos(String cadena) {
+		    String limpio =null;
+		    if (cadena !=null) {
+		        String valor = cadena;
+		        valor = valor.toUpperCase();
+		        limpio = Normalizer.normalize(valor, Normalizer.Form.NFD);
+		        limpio = limpio.replaceAll("[^\\p{ASCII}(N\u0303)(n\u0303)(\u00A1)(\u00BF)(\u00B0)(U\u0308)(u\u0308)]", "");
+		        limpio = Normalizer.normalize(limpio, Normalizer.Form.NFC);
+		    }
+		    return limpio;
+	 }
 	
 
 }

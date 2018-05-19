@@ -52,9 +52,22 @@
 					            <div class="card-block p-5">
 					              <img src="<% out.println(itemsArray.get(i).imagen); %>"  alt="Imagen" width="180" height="180">
 					              <hr>
-					              <p>Nombre : <% out.println(itemsArray.get(i).nombre); %></p>
-					              <p>Descripcion : <% out.println(itemsArray.get(i).descripcion); %> </p>
+					              <strong><p><% out.println(itemsArray.get(i).nombre); %></p></strong>
+					              <p><% out.println(itemsArray.get(i).descripcion); %> </p>
 					              <p>Precio :  <% out.println(itemsArray.get(i).precio); %></p>
+					              <hr>
+					              <%
+					              		if(itemsArray.get(i).tienda == 0){
+					              		%>
+					              			<img src="mascoteros.jpg"  alt="Mascoteros" width="200" height="70">
+					              		<%	
+					              		}else if(itemsArray.get(i).tienda == 1){
+					              		%>
+					              			<img src="tiendanimal.png"  alt="Tiendanimal" width="200" height="50">
+					              		<%
+					              		}
+					              %>
+					              <hr>			              
 					              <a href=" <% out.println(itemsArray.get(i).enlace); %>" class="btn btn-dark">Comprar</a>
 					            </div>
 					          </div>
@@ -64,9 +77,22 @@
 					            <div class="card-block p-5">
 					              <img src="<% out.println(itemsArray.get(i+1).imagen); %>"  alt="Imagen" width="180" height="180">
 					              <hr>
-					              <p>Nombre : <% out.println(itemsArray.get(i+1).nombre); %></p>
-					              <p>Descripcion : <% out.println(itemsArray.get(i+1).descripcion); %> </p>
+					              <strong><p><% out.println(itemsArray.get(i+1).nombre); %></p></strong>
+					              <p><% out.println(itemsArray.get(i+1).descripcion); %> </p>
 					              <p>Precio :  <% out.println(itemsArray.get(i+1).precio); %></p>
+					              <hr>
+					              <%
+					              		if(itemsArray.get(i+1).tienda == 0){
+					              		%>
+					              			<img src="mascoteros.jpg"  alt="Mascoteros" width="200" height="70">
+					              		<%	
+					              		}else if(itemsArray.get(i+1).tienda == 1){
+					              		%>
+					              			<img src="tiendanimal.png"  alt="Tiendanimal" width="200" height="50">
+					              		<%
+					              		}
+					              %>
+					              <hr>
 					              <a href=" <% out.println(itemsArray.get(i+1).enlace); %>" class="btn btn-dark">Comprar</a>
 					            </div>
 					          </div>
@@ -76,9 +102,22 @@
 					            <div class="card-block p-5">
 					           	  <img src="<% out.println(itemsArray.get(i+2).imagen); %>"  alt="Imagen" width="180" height="180">
 					              <hr>
-					              <p>Nombre : <% out.println(itemsArray.get(i+2).nombre); %></p>
-					              <p>Descripcion : <% out.println(itemsArray.get(i+2).descripcion); %> </p>
+					              <strong><p><% out.println(itemsArray.get(i+2).nombre); %></p></strong>
+					              <p><% out.println(itemsArray.get(i+2).descripcion); %> </p>
 					              <p>Precio :  <% out.println(itemsArray.get(i+2).precio); %></p>
+					              <hr>
+					              <%
+					              		if(itemsArray.get(i+2).tienda == 0){
+					              		%>
+					              			<img src="mascoteros.jpg"  alt="Mascoteros" width="200" height="70">
+					              		<%	
+					              		}else if(itemsArray.get(i+2).tienda == 1){
+					              		%>
+					              			<img src="tiendanimal.png"  alt="Tiendanimal" width="200" height="50">
+					              		<%
+					              		}
+					              %>
+					              <hr>
 					              <a href=" <% out.println(itemsArray.get(i+2).enlace); %>" class="btn btn-dark">Comprar</a>
 					            </div>
 					          </div>

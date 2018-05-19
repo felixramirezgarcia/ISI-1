@@ -52,6 +52,10 @@ public class Servlet extends HttpServlet {
     			 String nombre = elem.getElementsByClass("list_name_prod_box").text();
     			 String descripcion = elem.getElementsByClass("product_short_description").text();
     			 String precio = elem.getElementsByClass("product-pricing-now").text();
+    			 
+    			 nombre = Producto.limpiarAcentos(nombre);
+    			 descripcion = Producto.limpiarAcentos(descripcion);
+    			 descripcion = descripcion.toLowerCase();
     			                    
     			 Producto p = new Producto(nombre,descripcion,precio);
     			 aux.add(p);	   			                    
@@ -76,6 +80,7 @@ public class Servlet extends HttpServlet {
     		int g = 0;
     		for (int j = 0; j < aux.size()-2; j=j+2) {
     			Producto p = new Producto(aux.get(j).nombre,aux.get(j).descripcion,aux.get(j+1).precio,aux.get(j+1).enlace,auxiliar.get(g));
+    			p.setTienda(0);
     			resultado.add(p);
     			g++;
 			}
@@ -100,6 +105,10 @@ public class Servlet extends HttpServlet {
     			String nombre = elem.getElementsByClass("js-enhanced_product").text();
     	        String precio = elem.getElementsByClass("price_val").text();
     	        String enlace = elem.getElementsByClass("js-enhanced_product").attr("href");
+    	        
+    	        nombre = Producto.limpiarAcentos(nombre);
+   			 	descripcion = Producto.limpiarAcentos(descripcion);
+   			 	descripcion = descripcion.toLowerCase();
     	                  
     	        if(descripcion.length()>1 && nombre.length()>1 && precio.length()>1 ){
     	           Producto p = new Producto(nombre,descripcion,precio,enlace);
@@ -114,6 +123,7 @@ public class Servlet extends HttpServlet {
     			if(imagen.indexOf(".jpg")!=-1 && imagen.indexOf("banners")==-1 && imagen.indexOf("logo")==-1 && imagen.indexOf("login")==-1 && i < aux1.size()) {
         			//System.out.println("La url de la imagen es : " + imagen);
         			aux1.get(i).setImagen(imagen);
+        			aux1.get(i).setTienda(1);
         			i++;
     			}
     		}
