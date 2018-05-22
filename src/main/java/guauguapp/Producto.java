@@ -10,7 +10,7 @@ public class Producto {
     public String precio = new String();
     public String enlace = new String();
     public String imagen = new String();
-    public int tienda;
+    public int tienda ;
 	
 	public Producto(String nombre, String descripcion, String precio , String enlace){
 		this.nombre= nombre;
@@ -25,6 +25,7 @@ public class Producto {
 		this.precio = precio;
 		this.enlace = enlace;
 		this.imagen = imagen;
+		this.tienda = 2;
 	}
 	
 	public Producto(String nombre, String descripcion, String precio){
@@ -45,7 +46,7 @@ public class Producto {
 	
 	public String imprimirPorPantalla() {
         	String g = new String();
-        	g = nombre + descripcion +  enlace + precio + imagen;
+        	g = nombre + descripcion +  enlace + precio + imagen + " la tienda es " +tienda;
         	return g;       
 	}
 	
@@ -66,6 +67,8 @@ public class Producto {
 		        valor = valor.toUpperCase();
 		        limpio = Normalizer.normalize(valor, Normalizer.Form.NFD);
 		        limpio = limpio.replaceAll("[^\\p{ASCII}(N\u0303)(n\u0303)(\u00A1)(\u00BF)(\u00B0)(U\u0308)(u\u0308)]", "");
+		        limpio = limpio.replaceAll("ñ", "n");
+		        limpio = limpio.replaceAll("Ñ", "N");
 		        limpio = Normalizer.normalize(limpio, Normalizer.Form.NFC);
 		    }
 		    return limpio;

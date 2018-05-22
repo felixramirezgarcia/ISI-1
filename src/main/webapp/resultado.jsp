@@ -65,6 +65,10 @@
 					              		%>
 					              			<img src="tiendanimal.png"  alt="Tiendanimal" width="200" height="50">
 					              		<%
+					              		}else if(itemsArray.get(i).tienda == 2){
+					              		%>
+					              			<img src="amazon.jpg"  alt="Amazon" width="200" height="50">
+					              		<%
 					              		}
 					              %>
 					              <hr>			              
@@ -90,6 +94,10 @@
 					              		%>
 					              			<img src="tiendanimal.png"  alt="Tiendanimal" width="200" height="50">
 					              		<%
+					              		}else if(itemsArray.get(i+1).tienda == 2){
+					              		%>
+					              			<img src="amazon.jpg"  alt="Amazon" width="200" height="50">
+					              		<%
 					              		}
 					              %>
 					              <hr>
@@ -114,6 +122,10 @@
 					              		}else if(itemsArray.get(i+2).tienda == 1){
 					              		%>
 					              			<img src="tiendanimal.png"  alt="Tiendanimal" width="200" height="50">
+					              		<%
+					              		}else if(itemsArray.get(i+2).tienda == 2){
+					              		%>
+					              			<img src="amazon.jpg"  alt="Amazon" width="200" height="50">
 					              		<%
 					              		}
 					              %>
